@@ -1,0 +1,51 @@
+
+
+<% @search.each do |@c| %>
+<ul><ul>
+<% val =1%>
+	<% @c.each do |a| %>
+	
+	<% if val==1 %>
+	<li>
+		Tweet :<%= a.split('text') %>
+	</li>
+	<% end %>
+	<% if val==2 %>
+	<li>
+		posted by:<%= a.split('from_user') %>
+	</li>
+	<% end %>
+	<% if val==3 %>
+	<li>
+		<%= a.split('to_user_id') %>
+	</li>
+	<% end %>
+	<% if val==4 %>
+	<li>
+		<%= a.split('id') %>
+	</li>
+	<% end %>
+	<% if val==5 %>
+	<li>
+		<%= a.split('from_user_id') %>
+	</li>
+	<% end %>
+	<% if val==6 %>
+	<li>
+		Posted at:<%= a.split('created_at') %>
+	</li>
+	<% end %>
+	<% if val==7 %>
+	<li>
+		User's image <img src="<%=a.split('profile_image_url')%>" />
+	</li>
+	<% end %>
+	<%  val = val +1 %>
+	
+
+	<% end %>
+</ul></ul>
+<% end %>
+
+
+

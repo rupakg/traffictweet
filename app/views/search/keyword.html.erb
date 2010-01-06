@@ -1,0 +1,7 @@
+<% form_for :keyword, :url => { :action => :find } do |form| %>
+<p>
+<%= label :keyword, :keyword, "Location:" %>
+<%= form.text_field :keyword, :size => 30 %>
+</p>
+<%= submit_tag "search" , :class => "submit" %>
+<% end %>

@@ -1,0 +1,6 @@
+TrafficTweet is an application for Crowdsourcing Traffic Information via twitter
+
+Gems Required
+twitter
+twitter4r
+geocoding

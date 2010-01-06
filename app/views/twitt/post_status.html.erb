@@ -1,0 +1,10 @@
+<%= link_to 'Find Location', :action =>"map" %><br>
+<%= link_to 'Logout', :action =>"logout" %>
+<% form_for :post, :url => { :action => :post_status } do |form| %>
+<p>
+<%= label :post, :message, "Message:" %>
+<%= form.text_field :message, :size => 30 %>
+</p>
+
+<%= submit_tag "post" , :class => "submit" %>
+<% end %>

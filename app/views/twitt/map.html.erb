@@ -1,0 +1,21 @@
+
+<% form_for :location, :url => { :action => :map } do |form| %>
+<p>
+<%= label :location, :address, "Name:" %>
+<%= form.text_field :address, :size => 40 %>
+</p>
+<%= submit_tag "search" , :class => "submit" %>
+<% end %>
+
+
+<html>
+   <head>
+      <title>Test</title>
+      <%= GMap.header %>
+      <%= @map.to_html %>
+   </head>
+   <body>
+      <%= @map.div(:width => 493, :height => 300) %>
+   </body>
+</html>
+
